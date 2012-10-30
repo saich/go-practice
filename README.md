@@ -1,7 +1,7 @@
 Go Practice
 ==============
 
-Just learning (The Go Programming Language) [http://golang.org].
+Just learning [The Go Programming Language](http://golang.org).
 
 Learning Sources
 -------------------
