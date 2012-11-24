@@ -67,6 +67,13 @@ func main() {
 		fmt.Println("Good evening.")
 	}
 
-	// TODO: Multiple switch conditions can be given in a case statement
+	// Multiple conditions can be given in a case statement
+	j := 5
+	switch j {
+	case 0, 2, 4, 8:
+		fmt.Println(j, "is even")
+	case 1, 3, 5, 7, 9:
+		fmt.Println(j, "is odd")
+	}
 
 }
