@@ -36,8 +36,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "URL Parameters: %v\n", r.Form) // Parsed Form data
 
 	// Try this: http://localhost:8080/?test=asdasd&test=qwerty
-	// NOTE: The duplicate parameters are appended instead of overwritten..
-	fmt.Fprintf(w, "Test Parameters: %v\n", r.Form["test"])
+	// NOTE: The duplicate parameters are appended instead of overwritten to Form..
+	// However, FormValue() returns the 1st found value, which is generally preferable
+	fmt.Fprintf(w, "Test Parameters: %v, %v\n", r.Form["test"], r.FormValue("test"))
 
 	// TODO: To distinguish GET and POST parameters, @see http://code.google.com/p/go/issues/detail?id=3630
 

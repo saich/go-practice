@@ -1,0 +1,1 @@
+This is the implementation of the concepts and sample code as explained in [Writing Web Applications](http://golang.org/doc/articles/wiki/)

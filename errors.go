@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"time"
 )
@@ -43,6 +44,17 @@ func main() {
 	}
 
 	if err := run2(); err != nil {
+		fmt.Println(err)
+	}
+
+	//If we are not bothered about custom error types,creating an error is very easy with "errors" package
+	err := errors.New("This is an error")
+
+	// To create descriptive error messages, we can use fmt.Errorf
+	// %q is like %s with double quotes (and string escape)
+	err = fmt.Errorf("user %q (id %q) not found in the system", "sai<>!@$%^&*()_{:}+", "id")
+
+	if err != nil {
 		fmt.Println(err)
 	}
 }
